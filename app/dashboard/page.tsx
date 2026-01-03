@@ -24,6 +24,7 @@ interface Lead {
   email_status: string
   follow_up_count: number
   category_id: string | null
+  last_updated: string
   categories?: {
     id: string
     name: string

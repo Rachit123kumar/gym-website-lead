@@ -93,7 +93,7 @@ export function AddLeadDialog({ onLeadAdded }: AddLeadDialogProps) {
         },
         body: JSON.stringify({
           gym_name: formData.gym_name,
-          email: formData.email,
+          email: formData.email || null,
           phone: formData.phone || null,
           website: formData.website || null,
           city: formData.city || null,
@@ -163,7 +163,7 @@ export function AddLeadDialog({ onLeadAdded }: AddLeadDialogProps) {
               placeholder="contact@gym.com"
               value={formData.email}
               onChange={handleChange}
-              required
+            
             />
           </div>
 

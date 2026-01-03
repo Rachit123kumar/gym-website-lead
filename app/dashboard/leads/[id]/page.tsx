@@ -13,6 +13,7 @@ import { SendEmailDialog } from "@/components/send-email-dialog"
 import { ReplyDialog } from "@/components/reply-dialog"
 import { FollowUpDialog } from "@/components/follow-up-dialog"
 import { SyncGmailButton } from "@/components/sync-gmail-button"
+import PhoneActions from "@/components/copybtn"
 
 interface Lead {
   id: string
@@ -121,7 +122,8 @@ export default function LeadDetailPage() {
                 {lead.phone && (
                   <div>
                     <p className="text-xs text-muted-foreground">Phone</p>
-                    <p className="font-mono text-xs sm:text-sm">{lead.phone}</p>
+                    <PhoneActions phone={lead.phone} />
+
                   </div>
                 )}
 

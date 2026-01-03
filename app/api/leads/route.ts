@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
   const { gym_name, email, phone, website, city, state, notes, category_id } = body
 
   // Validate required fields
-  if (!gym_name || !email) {
+  if (!gym_name ) {
     return NextResponse.json({ error: "Gym name and email are required" }, { status: 400 })
   }
 
