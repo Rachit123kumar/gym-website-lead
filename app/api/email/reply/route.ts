@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
       from: process.env.GMAIL_USER,
       to: recipientEmail,
       subject: "Re: Partnership Opportunity",
-      html: `<p>${replyBody}</p>`,
+      html: `${replyBody}`,
       inReplyTo: `<lead-${leadId}@gym-leads>`,
     })
 

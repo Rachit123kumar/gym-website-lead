@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   title: "Gym Lead Dashboard",
   description: "Manage and track gym leads with AI-powered email outreach",
   generator: "v0.app",
+   manifest: "/manifest.json",
+  themeColor: "#000000",
   icons: {
     icon: [
       {

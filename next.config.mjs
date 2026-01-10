@@ -1,3 +1,5 @@
+import withPWA from "next-pwa";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
@@ -6,6 +8,16 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
 
-export default nextConfig
+  // 👇 EXPLICITLY DISABLE TURBOPACK
+  experimental: {
+    turbo: false,
+  },
+};
+
+export default withPWA({
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === "development",
+})(nextConfig);
